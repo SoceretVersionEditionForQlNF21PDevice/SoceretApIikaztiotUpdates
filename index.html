@@ -177,51 +177,81 @@ body {
 <p>אפליקציית מצלמה של חברת גוגל</p>
 <p>הועלה בתאריך 24.05.2023</p>
 <title>File Download with Password Protection</title>
+
     <style>
-        #downloadButton {
-            display: none;
-        }
+
+      #downloadButton .button {
+
+        display: none;
+
+      }
+
     </style>
+
     <script>
-        function showDownloadButton() {
-            var password = document.getElementById("password").value;
-            if (password == "2001a") {
-                document.getElementById("passwordForm").style.display = "none";
-                document.getElementById("downloadButton").style.display = "block";
-            } else {
-                location.reload(); // Reload the page
-            }
+
+      function showDownloadButton() {
+
+        var password = document.getElementById("password").value;
+
+        if (password == "2001a") {
+
+          document.getElementById("downloadButton").style.display = "block";
+
+          document.getElementById("downloadButton").querySelector(".button").style.display = "block";
+
+          document.getElementById("passwordForm").style.display = "none";
+
+        } else {
+
+          location.reload(); // Reload the page
+
         }
+
+      }
+
     </script>
-</head>
-<body>
+
+  </head>
+
+  <body>
+
     <div id="passwordForm">
-        <label for="password">הזינו סיסמה:</label>
-        <input type="password" id="password" size="5">
-        <button onclick="showDownloadButton()">אישור</button>
+
+      <label for="password">הזינו סיסמה:</label>
+
+      <input type="password" id="password" size="5">
+
+      <button onclick="showDownloadButton()">אישור</button>
+
     </div>
+
     <div id="downloadButton">
-        <a href="https://github.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/raw/main/Apps/%D7%9E%D7%A6%D7%9C%D7%9E%D7%94.apk" class="button">לחץ להורדה</a><br><br><br>
 
- <!--
-<a href="https://github.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/raw/main/Apps/Install.apk" class="button">לחץ להורדה</a><br><br><br>
--->
+      <a href="https://github.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/raw/main/Apps/%D7%9E%D7%A6%D7%9C%D7%9E%D7%94.apk" class="button">לחץ להורדה</a><br><br><br>
 
- <!--
-<a href="https://github.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/raw/main/Apps/מצלמה.apk" class="button">לחץ להורדה</a><br><br><br>
---> 
+      <!-- <a href="https://github.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/raw/main/Apps/Install.apk" class="button">Click to download</a><br><br><br> -->
 
+      <!-- <a href="https://github.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/raw/main/Apps/camela.apk" class="button">Click to download</a><br><br><br> -->
 
+      <!-- Copyright -->
 
-<!-- Copyrights -->
+      <br>
 
-<br><div id="copyright"><br>
-<img src="Icons/ic_kosher.png" width="72" height="72">
+      <div id="copyright">
 
-<p><a>© נבנה על ידי שלום כהן</a> </p>
-<p><a>Cohen Kosher Store</a> </p>
- 
-</div>
+        <br>
 
-</body>
+        <img src="Icons/ic_kosher.png" width="72" height="72">
+
+        <p><a>© נבנה על ידי שלום כהן</a> </p>
+
+        <p><a>Cohen Kosher Store</a> </p>
+
+      </div>
+
+    </div>
+
+  </body>
+
 </html>
