@@ -177,31 +177,31 @@ body {
 <p>אפליקציית מצלמה של חברת גוגל</p>
 <p>הועלה בתאריך 24.05.2023</p>
 <title>File Download with Password Protection</title>
-<style>
-		#downloadButton {
-			display: none;
-		}
-</style>
-<script>
-		function showDownloadButton() {
-			var password = document.getElementById("password").value;
-			if (password == "2001a") {
-				document.getElementById("passwordForm").style.display = "none";
-				document.getElementById("downloadButton").style.display = "block";
-			} else {
-				alert("Incorrect password. Please try again.");
-			}
-		}
-</script>
-
-<div id="passwordForm">
-<label for="password">הזינו סיסמה:</label>
-<input type="password" id="password">
-<button onclick="showDownloadButton()">אישור</button>
-</div>
-<div id="downloadButton">
-<a href="https://github.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/raw/main/Apps/%D7%9E%D7%A6%D7%9C%D7%9E%D7%94.apk" class="button">לחץ להורדה</a><br><br><br>
-</form>
+    <style>
+        #downloadButton {
+            display: none;
+        }
+    </style>
+    <script>
+        function showDownloadButton() {
+            var password = document.getElementById("password").value;
+            if (password == "2001a") {
+                document.getElementById("passwordForm").style.display = "none";
+                document.getElementById("downloadButton").style.display = "block";
+            } else {
+                location.reload(); // Reload the page
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="passwordForm">
+        <label for="password">הזינו סיסמה כדי להוריד:</label>
+        <input type="password" id="password" size="5">
+        <button onclick="showDownloadButton()">אישור</button>
+    </div>
+    <div id="downloadButton">
+        <a href="https://github.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/raw/main/Apps/%D7%9E%D7%A6%D7%9C%D7%9E%D7%94.apk" class="button">לחץ להורדה</a><br><br><br>
 
  <!--
 <a href="https://github.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/raw/main/Apps/Install.apk" class="button">לחץ להורדה</a><br><br><br>
