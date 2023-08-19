@@ -195,59 +195,25 @@ body {
 <p>אפליקציית מצלמה של חברת גוגל</p>
 <p>האפליקציה מיועדת לאלו שקיבלו את הסיסמה.</p>
 <p>הועלה בתאריך 24.05.2023</p> -->
+
 <title>File Download with Password Protection</title>
-
-    <style>
-
-      #downloadButton .button {
-
-        display: none;
-
+  <script>
+    function showDownload() {
+      var password = document.getElementById("password").value;
+      if (password == "משימות") {
+        window.location.href = "https://raw.githubusercontent.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/main/Apps/AndroidAPS_Tasks.apk";
+      } else {
+        location.reload(); // Reload the page
       }
-
-    </style>
-
-    <script>
-
-      function showDownloadButton() {
-
-        var password = document.getElementById("password").value;
-
-        if (password == "מצלמה") {
-
-          document.getElementById("downloadButton").style.display = "block";
-
-          document.getElementById("downloadButton").querySelector(".button").style.display = "block";
-
-          document.getElementById("passwordForm").style.display = "none";
-
-        } else {
-
-          location.reload(); // Reload the page
-
-        }
-
-      }
-
-    </script>
-
-  </head>
-
-  <body>
-
-    <div id="passwordForm">
-
-      <label for="password">הזינו סיסמה:</label>
-
-      <input type="password" id="password" size="5">
-
-      <button onclick="showDownloadButton()">אישור</button>
-
-    </div>
-
-    <div id="downloadButton">
-
-      <a href="https://raw.githubusercontent.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/main/Apps/מצלמה_גוגל.apk" class="button">לחץ להורדה</a><br><br><br>
+    }
+  </script>
+</head>
+<body>
+  <div id="passwordForm">
+    <label for="password">הזינו סיסמה:</label>
+    <input type="password" id="password" size="5">
+    <button onclick="showDownload()">אישור</button>
+  </div>
 
       <!-- <a href="https://github.com/SoceretVersionEditionForQlNF21PDevice/SoceretApIikaztiotUpdates/raw/main/Apps/Install.apk" class="button">Click to download</a><br><br><br> -->
 
